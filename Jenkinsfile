@@ -13,6 +13,15 @@ pipeline{
         sh 'mvn clean install'        
         }      
     }
+    stage ( 'Run Locally' ) {
+      steps {
+        script {
+          sh 'java -jar /workspace/WeatherUpdate/target/weather-forecast-app-1.0-SNAPSHOT.jar &"
+          sleep 20
+        
+        }
+      }
+   }
     
     }
   }
