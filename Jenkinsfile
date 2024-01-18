@@ -16,7 +16,7 @@ pipeline{
     stage ( 'Run Locally' ) {
       steps {
         script {
-          sh 'java -jar "/home/slave1/workspace/WeatherUpdate/target/weather-forecast-app-1.0-SNAPSHOT.jar &"'
+          sh 'java -jar /home/slave1/workspace/WeatherUpdate/target/weather-forecast-app-1.0-SNAPSHOT.jar &'
           sleep 20
         
         }
