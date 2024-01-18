@@ -23,8 +23,7 @@ pipeline{
       }
    }
     stage ( 'Deploy' ) {
-      steps {
-        sh 'ssh root@172.31.90.86'
+      steps {       
         sh 'scp /home/slave1/workspace/WeatherUpdate/target/weather-forecast-app-1.0-SNAPSHOT.jar root@172.31.90.86:/opt/apache-tomcat-8.5.98/webapps/'
       }
      }    
